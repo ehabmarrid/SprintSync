@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Cloud backup rules for API 30 and below (android:fullBackupContent).
+
+    sprint_sync_session holds the signed-in user's profile and sprint_sync_local_database
+    holds the demo repository, including the accounts demo mode creates on the fly.
+    Neither belongs in a Google account backup that can be restored onto another device.
+    sprint_sync_theme is deliberately left backed up - it is a UI preference with nothing
+    personal in it, and restoring it is a small convenience.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="sprint_sync_session.xml" />
+    <exclude domain="sharedpref" path="sprint_sync_local_database.xml" />
+</full-backup-content>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SprintSync</string>
+    <string name="app_tagline">מקדמים את העבודה, ביחד.</string>
+    <string name="sign_in_title">SprintSync</string>
+    <string name="sign_in_subtitle">התחברות לסביבת העבודה</string>
+    <string name="email">אימייל</string>
+    <string name="password">סיסמה</string>
+    <string name="confirm_password">אימות סיסמה</string>
+    <string name="full_name">שם מלא</string>
+    <string name="login">התחברות</string>
+    <string name="create_account">יצירת חשבון</string>
+    <string name="new_here">משתמש חדש?</string>
+    <string name="continue_demo">כניסה לנתוני הדגמה</string>
+    <string name="demo_mode">מצב הדגמה · מידע מקומי</string>
+    <string name="firebase_mode">מחובר · סנכרון FIREBASE</string>
+    <string name="projects">פרויקטים</string>
+    <string name="tasks_and_members">%1$s · %2$s</string>
+    <string name="no_projects_title">אין עדיין פרויקטים</string>
+    <string name="no_projects_message">ניתן ליצור לוח ראשון באמצעות כפתור ה־+.</string>
+    <string name="new_project">פרויקט חדש</string>
+    <string name="project_name">שם הפרויקט</string>
+    <string name="sprint_label">שם הספרינט</string>
+    <string name="member_emails">אימיילים של חברי הצוות (מופרדים בפסיק)</string>
+    <string name="create">יצירה</string>
+    <string name="cancel">ביטול</string>
+    <string name="save">שמירה</string>
+    <string name="delete">מחיקה</string>
+    <string name="to_do">לביצוע</string>
+    <string name="in_progress">בתהליך</string>
+    <string name="done">הושלם</string>
+    <string name="board_summary">%1$s · %2$d משימות</string>
+    <string name="no_tasks_title">אין כאן משימות</string>
+    <string name="no_tasks_message">משימות בסטטוס הזה יופיעו כאן.</string>
+    <string name="new_task">משימה חדשה</string>
+    <string name="edit_task">עריכת משימה</string>
+    <string name="task_title">כותרת המשימה</string>
+    <string name="task_description">תיאור (לא חובה)</string>
+    <string name="task_label">תגית</string>
+    <string name="task_status">סטטוס</string>
+    <string name="task_details">פרטי המשימה</string>
+    <string name="move_to_status">העברה אל %1$s</string>
+    <string name="task_moved_to">הועבר אל %1$s</string>
+    <string name="undo">ביטול</string>
+    <string name="undo_task_missing">המשימה כבר לא קיימת.</string>
+    <string name="detail_description">תיאור</string>
+    <string name="detail_no_description">אין תיאור</string>
+    <string name="detail_assignee">משויך ל</string>
+    <string name="detail_unassigned">לא משויך</string>
+    <string name="assign_to_me">שיוך אליי</string>
+    <string name="delete_task">מחיקת משימה</string>
+    <string name="share_status">שיתוף סטטוס</string>
+    <string name="task_meta">%1$s · %2$s</string>
+    <string name="share_task_text">%1$s — %2$s בפרויקט %3$s</string>
+    <string name="share_via">שיתוף סטטוס המשימה</string>
+    <string name="delete_confirmation">למחוק את „%1$s”? לא ניתן לבטל פעולה זו.</string>
+    <string name="profile">פרופיל</string>
+    <string name="profile_subtitle">האווטאר שלך מופיע במשימות המשויכות אליך.</string>
+    <string name="choose_photo">בחירת תמונה</string>
+    <string name="upload_photo">העלאת אווטאר</string>
+    <string name="theme">החלפת ערכת נושא</string>
+    <string name="language">שפה</string>
+    <string name="language_system">ברירת המחדל של המערכת</string>
+    <string name="theme_mode_system">ערכת הנושא נקבעת לפי המערכת</string>
+    <string name="theme_mode_light">ערכת נושא בהירה</string>
+    <string name="theme_mode_dark">ערכת נושא כהה</string>
+    <string name="logout">התנתקות</string>
+    <string name="loading">טוען…</string>
+    <string name="invalid_email">יש להזין כתובת אימייל תקינה.</string>
+    <string name="invalid_password">הסיסמה חייבת להכיל לפחות 6 תווים.</string>
+    <string name="passwords_do_not_match">הסיסמאות אינן תואמות.</string>
+    <string name="required_field">זהו שדה חובה.</string>
+    <string name="signed_in_success">ברוך שובך, %1$s</string>
+    <string name="account_created">החשבון נוצר בהצלחה.</string>
+    <string name="board_created">הלוח נוצר.</string>
+    <string name="task_saved">המשימה נשמרה.</string>
+    <string name="task_deleted">המשימה נמחקה.</string>
+    <string name="task_assigned">המשימה שויכה אליך.</string>
+    <string name="avatar_updated">האווטאר עודכן.</string>
+    <string name="something_went_wrong">אירעה שגיאה: %1$s</string>
+    <string name="select_image_first">יש לבחור תמונה תחילה.</string>
+    <string name="content_description_avatar">אווטאר משתמש</string>
+    <string name="content_description_project_members">חברי הפרויקט</string>
+    <string name="member_overflow">+%1$d</string>
+
+    <!--
+        Hebrew inflects for 1 and for 2 separately, so the singular and dual forms spell
+        the number out and drop the digit: "%1$d לוחות פעילים" would render "1 לוחות
+        פעילים", which is wrong. Gender follows the noun - לוח and חבר are masculine
+        (שני), משימה is feminine (שתי).
+    -->
+    <plurals name="active_boards">
+        <item quantity="one">לוח פעיל אחד</item>
+        <item quantity="two">שני לוחות פעילים</item>
+        <item quantity="other">%1$d לוחות פעילים</item>
+    </plurals>
+
+    <plurals name="task_count">
+        <item quantity="one">משימה אחת</item>
+        <item quantity="two">שתי משימות</item>
+        <item quantity="other">%1$d משימות</item>
+    </plurals>
+
+    <string name="sync_just_now">סונכרן ממש עכשיו</string>
+
+    <plurals name="synced_seconds_ago">
+        <item quantity="one">סונכרן לפני שנייה</item>
+        <item quantity="two">סונכרן לפני שתי שניות</item>
+        <item quantity="other">סונכרן לפני %1$d שניות</item>
+    </plurals>
+
+    <plurals name="unmatched_invites">
+        <item quantity="one">הזמנה אחת לא תואמת לחשבון רשום.</item>
+        <item quantity="two">שתי הזמנות לא תואמות לחשבון רשום.</item>
+        <item quantity="other">%1$d הזמנות לא תואמות לחשבון רשום.</item>
+    </plurals>
+
+    <plurals name="member_count">
+        <item quantity="one">חבר אחד</item>
+        <item quantity="two">שני חברים</item>
+        <item quantity="other">%1$d חברים</item>
+    </plurals>
+
+
+    <string-array name="task_statuses">
+        <item>לביצוע</item>
+        <item>בתהליך</item>
+        <item>הושלם</item>
+    </string-array>
+</resources>

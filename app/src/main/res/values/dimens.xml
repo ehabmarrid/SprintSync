@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="card_corner">16dp</dimen>
+    <dimen name="swipe_label_text">14sp</dimen>
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="avatar_size">38dp</dimen>
+    <dimen name="logo_size">72dp</dimen>
+</resources>
+

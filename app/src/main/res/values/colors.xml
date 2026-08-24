@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#3977D6</color>
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="color_background">#F5F7FB</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_surface_variant">#E8EEF7</color>
+    <color name="color_outline">#C3CDDA</color>
+    <color name="color_text_primary">#172033</color>
+    <color name="color_text_secondary">#5C6B7F</color>
+    <color name="color_error">#BA1A1A</color>
+    <color name="tag_bug_background">#FBE3E6</color>
+    <color name="tag_bug_text">#A42635</color>
+    <color name="tag_ui_background">#E0EAFF</color>
+    <color name="tag_ui_text">#285BAC</color>
+    <color name="tag_api_background">#E6E0FF</color>
+    <color name="tag_api_text">#5E43A7</color>
+    <color name="tag_feature_background">#DDF4EB</color>
+    <color name="tag_feature_text">#146B50</color>
+    <color name="avatar_blue">#4F8DE8</color>
+    <color name="avatar_green">#3F9A82</color>
+    <color name="avatar_purple">#735DB8</color>
+    <color name="transparent">#00000000</color>
+</resources>

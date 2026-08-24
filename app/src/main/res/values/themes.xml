@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SprintSync" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorSurfaceVariant">@color/color_surface_variant</item>
+        <item name="colorOutline">@color/color_outline</item>
+        <item name="colorError">@color/color_error</item>
+        <item name="android:colorAccent">@color/color_primary</item>
+        <item name="android:windowBackground">@color/color_background</item>
+        <item name="android:statusBarColor">@color/color_background</item>
+        <item name="android:navigationBarColor">@color/color_background</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Widget.SprintSync.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/color_outline</item>
+        <item name="hintTextColor">@color/color_text_secondary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/card_corner</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/card_corner</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/card_corner</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/card_corner</item>
+    </style>
+
+    <!--
+        Same box treatment as Widget.SprintSync.TextInputLayout, but on the exposed
+        dropdown parent so the menu affordance and endIcon come from Material rather than
+        being hand-set per layout. Dot-notation inheritance is deliberately not used here:
+        an explicit parent overrides it, so the items are repeated on purpose.
+    -->
+    <style name="Widget.SprintSync.ExposedDropdownMenu" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/color_outline</item>
+        <item name="hintTextColor">@color/color_text_secondary</item>
+        <item name="boxCornerRadiusTopStart">@dimen/card_corner</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/card_corner</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/card_corner</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/card_corner</item>
+    </style>
+
+    <style name="Widget.SprintSync.PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.SprintSync.TaskActionButton" parent="Widget.Material3.Button.TextButton">
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/color_text_primary</item>
+        <item name="iconTint">@color/color_primary</item>
+    </style>
+</resources>

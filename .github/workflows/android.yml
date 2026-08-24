@@ -1,0 +1,51 @@
+name: Android CI
+
+# No secrets are configured, and none are needed. local.properties is gitignored,
+# so a CI checkout has no Firebase values, FirebaseBootstrap returns null, and
+# RepositoryProvider selects the local repository. The app therefore builds and its
+# tests run in Demo Mode on a clean machine - which is the same property that lets
+# anyone clone this repository and run it without configuring anything.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      # compileOptions target Java 17; 17 is the floor rather than the only option.
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Unit tests, lint and debug APK
+        run: ./gradlew testDebugUnitTest lintDebug assembleDebug
+
+      # Uploaded on failure too - a red build is when the reports are worth reading.
+      - name: Upload lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-results
+          path: app/build/reports/lint-results-debug.html
+          if-no-files-found: warn
+
+      - name: Upload unit test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: app/build/reports/tests/testDebugUnitTest/
+          if-no-files-found: warn

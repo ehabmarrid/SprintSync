@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup and device-transfer rules for API 31 and above
+    (android:dataExtractionRules). Same exclusions as backup_rules.xml, applied to both
+    channels: device-transfer moves data straight to a new phone and needs the session
+    and demo database withheld just as cloud backup does.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="sprint_sync_session.xml" />
+        <exclude domain="sharedpref" path="sprint_sync_local_database.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="sprint_sync_session.xml" />
+        <exclude domain="sharedpref" path="sprint_sync_local_database.xml" />
+    </device-transfer>
+</data-extraction-rules>

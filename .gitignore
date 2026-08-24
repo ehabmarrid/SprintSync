@@ -1,0 +1,32 @@
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.DS_Store
+
+# Gradle and generated build output
+.gradle/
+.gradle-local/
+.kotlin/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+/tmp/
+
+# Local machine and Firebase configuration
+/local.properties
+/.firebaserc
+google-services.json
+
+# Firebase CLI output
+/.firebase/
+firebase-debug*.log
+
+# Android signing material
+*.jks
+*.keystore
+/key.properties
+
+# JVM crash dumps
+hs_err_pid*.log
+replay_pid*.log

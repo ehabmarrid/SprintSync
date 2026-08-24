@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Locales the app ships translations for. On API 33+ this is what puts SprintSync in the
+    system's per-app language picker; below that it documents the same set for AppCompat.
+
+    "iw" is the correct tag here - it matches the values-iw resource folder, which is the
+    qualifier Android uses for Hebrew. Do not "correct" either of them to "he".
+-->
+<locale-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <locale android:name="en" />
+    <locale android:name="iw" />
+</locale-config>

@@ -1,0 +1,79 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['id', 'name', 'email'])",
+        "id": { ".validate": "newData.isString() && newData.val() === $uid" },
+        "name": { ".validate": "newData.isString()" },
+        "email": { ".validate": "newData.isString()" },
+        "avatarUrl": { ".validate": "newData.isString()" },
+        "$other": { ".validate": false }
+      }
+    },
+
+    "emailIndex": {
+      "$emailKey": {
+        ".read": "auth != null",
+        ".write": "auth != null && newData.val() === auth.uid && (!data.exists() || data.val() === auth.uid)",
+        ".validate": "newData.isString()"
+      }
+    },
+
+    "boards": {
+      "$boardId": {
+        ".read": "auth != null && data.child('memberIds').child(auth.uid).val() === true",
+        ".write": "auth != null && ((!data.exists() && newData.child('memberIds').child(auth.uid).val() === true) || data.child('memberIds').child(auth.uid).val() === true)",
+        ".validate": "newData.hasChildren(['id', 'name', 'memberIds'])",
+        "id": { ".validate": "newData.isString() && newData.val() === $boardId" },
+        "name": { ".validate": "newData.isString() && newData.val().length > 0" },
+        "sprintLabel": { ".validate": "newData.isString()" },
+        "memberIds": {
+          ".validate": "newData.hasChildren()",
+          "$memberUid": { ".validate": "newData.isBoolean()" }
+        },
+        "memberNames": {
+          "$index": { ".validate": "newData.isString()" }
+        },
+        "taskCount": { ".validate": "newData.isNumber()" },
+        "createdAt": { ".validate": "newData.isNumber()" },
+        "$other": { ".validate": false }
+      }
+    },
+
+    "userBoards": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        "$boardId": {
+          ".write": "auth != null && (auth.uid === $uid || (!data.exists() && newData.val() === true))",
+          ".validate": "newData.isBoolean()"
+        }
+      }
+    },
+
+    "tasks": {
+      "$boardId": {
+        ".read": "auth != null && root.child('boards').child($boardId).child('memberIds').child(auth.uid).val() === true",
+        ".write": "auth != null && root.child('boards').child($boardId).child('memberIds').child(auth.uid).val() === true",
+        "$taskId": {
+          ".validate": "newData.hasChildren(['id', 'boardId', 'title', 'status'])",
+          "id": { ".validate": "newData.isString() && newData.val() === $taskId" },
+          "boardId": { ".validate": "newData.isString() && newData.val() === $boardId" },
+          "title": { ".validate": "newData.isString() && newData.val().length > 0" },
+          "description": { ".validate": "newData.isString()" },
+          "label": { ".validate": "newData.isString()" },
+          "status": { ".validate": "newData.isString()" },
+          "assigneeId": { ".validate": "newData.isString()" },
+          "assigneeName": { ".validate": "newData.isString()" },
+          "assigneeAvatarUrl": { ".validate": "newData.isString()" },
+          "createdAt": { ".validate": "newData.isNumber()" },
+          "$other": { ".validate": false }
+        }
+      }
+    }
+  }
+}
